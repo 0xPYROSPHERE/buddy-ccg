@@ -5938,84 +5938,11 @@
                                         return (
                                             ne("PokiSDK.commercialBreak() ignored because of too many calls"), void n()
                                         );
-                                    const o = this.__gameStarted ? e.ads.position.midroll : e.ads.position.preroll;
-                                    this.__runVideoAd({
-                                        amount: 0,
-                                        position: o,
-                                        onStart: () => {
-                                            var e;
-                                            if (
-                                                (ea(this, Wr, ((e = ta(this, Wr, "f")), ++e), "f"),
-                                                window.pokiMeasureBuildin &&
-                                                    window.PokiSDK.measure("midroll", ta(this, Wr, "f")),
-                                                "function" == typeof t)
-                                            )
-                                                try {
-                                                    t();
-                                                } catch (e) {
-                                                    ne("error in onStart callback of PokiSDK.commercialBreak()", e);
-                                                }
-                                        },
-                                    }).then(() => {
-                                        n();
-                                    });
+                                    n();
                                 })),
                             (this.rewardedBreak = (t) =>
                                 new Promise((n) => {
-                                    if (
-                                        (this.__logCall("rewardedBreak", t),
-                                        "977b60eb-ff81-4c3a-895b-b585410d6c0d" === z.gameID)
-                                    )
-                                        return void n(!1);
-                                    let o,
-                                        i = 1;
-                                    if ("function" == typeof t) o = t;
-                                    else if ("object" == typeof t) {
-                                        t.onStart && (o = t.onStart);
-                                        const e = (null == t ? void 0 : t.size) || $e.SMALL;
-                                        e === $e.SMALL
-                                            ? (i = 1)
-                                            : e === $e.MEDIUM
-                                              ? (i = 2)
-                                              : e === $e.LARGE && (i = 3);
-                                    }
-                                    ta(this, Kr, "f")
-                                        ? setTimeout(() => {
-                                              if ("function" == typeof o)
-                                                  try {
-                                                      o();
-                                                  } catch (e) {
-                                                      ne("error in onStart callback of PokiSDK.rewardedBreak()", e);
-                                                  }
-                                              setTimeout(() => {
-                                                  n(!0);
-                                              }, 100);
-                                          }, 100)
-                                        : setTimeout(() => {
-                                              this.__runVideoAd({
-                                                  position: e.ads.position.rewarded,
-                                                  amount: 0,
-                                                  onStart: () => {
-                                                      var e;
-                                                      if (
-                                                          (ea(this, Vr, ((e = ta(this, Vr, "f")), ++e), "f"),
-                                                          window.pokiMeasureBuildin &&
-                                                              window.PokiSDK.measure("rewarded", ta(this, Vr, "f")),
-                                                          "function" == typeof o)
-                                                      )
-                                                          try {
-                                                              o();
-                                                          } catch (e) {
-                                                              ne(
-                                                                  "error in onStart callback of PokiSDK.rewardedBreak()",
-                                                                  e
-                                                              );
-                                                          }
-                                                  },
-                                              }).then((e) => {
-                                                  n(e);
-                                              });
-                                          }, 0);
+                                    n();
                                 })),
                             (this.displayAd = (t, n, o, i) => {
                                 if ((this.__logCall("displayAd", t, n, o, i), ta(this, Kr, "f"))) return;
