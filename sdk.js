@@ -282,22 +282,17 @@
         }
     if (!k) {
         const e = (() => {
-                /** const e = window.pokiSDKVersion || c("ab") || "eaa5e71ba816bc70b0d49514e38ab8f23df7c63c";
-                let t = `poki-sdk-core-${e}.js`;
+                let t = `poki-sdk-core.js`;
                 return (
-                    u && (t = `poki-sdk-playground-${e}.js`),
-                    p && (t = `poki-sdk-hoist-${e}.js`),
-                    b && u && (t = `poki-sdk-app-${e}.js`),
-                    m && (t = `poki-sdk-${g}-${e}.js`),
-                    `scripts/${e}/${t}`
-                ); **/
-                return;
+                    u && (t = `playground.min.js`),
+                    p && (t = `hoist.min.js`)
+                );
             })();
-            //t = document.createElement("script");
-        /**t.setAttribute("src", e),
+            t = document.createElement("script");
+        t.setAttribute("src", e),
             t.setAttribute("type", "text/javascript"),
             t.setAttribute("crossOrigin", "anonymous"),
             (t.onload = () => f.dequeue()),
-            document.head.appendChild(t);**/
+            document.head.appendChild(t);
     }
 })();
