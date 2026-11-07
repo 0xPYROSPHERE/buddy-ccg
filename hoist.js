@@ -5940,7 +5940,7 @@
                                         );
                                     const o = this.__gameStarted ? e.ads.position.midroll : e.ads.position.preroll;
                                     this.__runVideoAd({
-                                        amount: 1,
+                                        amount: 0,
                                         position: o,
                                         onStart: () => {
                                             var e;
@@ -5994,7 +5994,7 @@
                                         : setTimeout(() => {
                                               this.__runVideoAd({
                                                   position: e.ads.position.rewarded,
-                                                  amount: i,
+                                                  amount: 0,
                                                   onStart: () => {
                                                       var e;
                                                       if (
