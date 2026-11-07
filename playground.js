@@ -14600,7 +14600,7 @@
                                     return oe("PokiSDK.commercialBreak() ignored because of too many calls"), void t();
                                 const i = this.__gameStarted ? n.ads.position.midroll : n.ads.position.preroll;
                                 this.__runVideoAd({
-                                    amount: 1,
+                                    amount: 0,
                                     position: i,
                                     onStart: () => {
                                         var t;
@@ -14650,7 +14650,7 @@
                                     : setTimeout(() => {
                                           this.__runVideoAd({
                                               position: n.ads.position.rewarded,
-                                              amount: o,
+                                              amount: 0,
                                               onStart: () => {
                                                   var e;
                                                   if (
