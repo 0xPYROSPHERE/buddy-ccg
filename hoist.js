@@ -5942,7 +5942,7 @@
                                 })),
                             (this.rewardedBreak = (t) =>
                                 new Promise((n) => {
-                                    n(false);
+                                    n(true);
                                 })),
                             (this.displayAd = (t, n, o, i) => {
                                 if ((this.__logCall("displayAd", t, n, o, i), ta(this, Kr, "f"))) return;
